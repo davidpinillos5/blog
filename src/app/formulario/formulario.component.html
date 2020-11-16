@@ -1,0 +1,54 @@
+<form [formGroup]="formulario" (ngSubmit)='onSubmit()'>
+    <div class="container">
+        <div class="form-group">
+            <label>Título</label>
+            <input type="text" class="form-control" formControlName="titulo">
+            <p class="text-danger" *ngIf="formulario.get('titulo').hasError('required') && formulario.get('titulo').touched ">
+                El campo titulo debe estar completo.
+            </p>   
+        </div>
+
+        <div>
+            <label>Texto</label>
+            <input type="text" class="form-control texto" formControlName="texto" >
+            <p class="text-danger" *ngIf="formulario.get('texto').hasError('required') && formulario.get('texto').touched ">
+                El campo texto debe estar completo.
+            </p>
+        </div>
+
+        <div>
+            <label>Autor</label>
+            <input type="text" class="form-control" formControlName="autor">
+            <p class="text-danger" *ngIf="formulario.get('autor').hasError('required') && formulario.get('autor').touched ">
+                El campo autor debe estar completo
+            </p>
+        </div>
+
+        <div>
+            <label>Imagen</label>
+            <input type="url" class="form-control" formControlName="imagen">
+            <p class="text-danger" *ngIf="formulario.get('imagen').hasError('required') && formulario.get('imagen').touched ">
+                Debe añadir una Imagen en formato Url.
+            </p>
+        </div>
+
+        <div>
+            <label>Fecha</label>
+            <input type="date" class="form-control" formControlName="fecha">
+            <p class="text-danger" *ngIf="formulario.get('fecha').hasError('required') && formulario.get('fecha').touched">
+                El campo fecha debe estar completo.
+            </p>
+        </div>
+        <div>
+            <select class="form-control select" formControlName="categoria">
+                <option value="" >Selecciona una categoria</option>
+                <option value="viajes">Viajes</option>
+                <option value="deportes">Deportes</option>
+                <option value="gastronomia">Gastronomía</option>
+                <option value="ocio">Ocio</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Agregar post" [disabled]="!formulario.valid" class="btn btn-block btn-success">
+    </div>
+</form>

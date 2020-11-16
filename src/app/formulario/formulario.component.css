@@ -1,0 +1,13 @@
+.texto{
+    padding-bottom: 100px;
+    text-align: start;
+}
+.select{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+label{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

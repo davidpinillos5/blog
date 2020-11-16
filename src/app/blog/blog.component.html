@@ -1,0 +1,20 @@
+<select (change)="onChange($event)">
+    <option value="selecciona">Selecciona una Categoria</option>
+    <option [value]="categoria" *ngFor="let categoria of categorias ">
+        {{ categoria | titlecase }}
+    </option>
+</select>
+
+
+
+
+<div class="articulos row">
+    <div class="articulo card" *ngFor="let articulo of arrArticulos">
+        <h3 class="card-title">{{articulo.titulo}}</h3>
+        <p class="card-text"> {{articulo.texto}}</p>
+        <img [src]="articulo.imagen" class="card-img-left">
+        <h6 class="card-subtitle mb-2 text-muted">{{articulo.autor}}</h6>
+        <p class="sm"> {{articulo.categoria}}</p>
+
+    </div>
+</div>

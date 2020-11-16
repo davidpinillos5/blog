@@ -1,0 +1,13 @@
+div.card{
+    width: 25rem;
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 2px solid teal;
+}
+img{
+    max-width: 20rem;
+}
+h6{
+    margin-top: 1px;
+}
